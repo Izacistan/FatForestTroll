@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Fat Forest Troll | Web Design & Development</title>
-<link rel="stylesheet" type="text/css" href="normalize.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+  <meta charset="utf-8">
+  <html lang="en-US">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport, tells the site to use the device's width when displaying, sets the scale to 1.0 -->
+  <!-- <link rel="icon" href="img/via_logo_2.png">  ICON GOES HERE-->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Fat Forest Troll | Web Design & Development</title>
 </head>
+
 <body>
 
-<h1>Fat Forest Troll</h1>
-<h2>Web Design + Development</h2>
+  <header>
+    <!-- LOGO .SVG WILL GO HERE -->
+    <h1>Fat Forest Troll</h1>
+    <h2>Web Design + Development</h2>
+    <button>My Work</button>
+  </header>
 
-<button>My Work</button>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </nav>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Work</a>
-  <a href="#">Contact</a>
-</nav>
+
+  <!--==================================================================
+                               ABOUT PAGE
+  Split into two <div>s, functioning as two seperate pages: Services & Bio.
+ =====================================================================-->
+  <div id="aboutServices">
+    <h2 class="servicesHeader">Services</h2>
+    <div class="servicesBox">
+      Services Box Goes Here. SVG icons and descriptions.
+    </div>
+  </div>
+
+  <div id="aboutBio">
+    <h2 class="aboutMeHeader">About Me</h2>
+    <!-- <img class="profilePic"> Profile Image will go here -->
+    <p class="bioTxt">My biography will go here.</p>
+  </div>
 
 </body>
 </html>
