@@ -4,7 +4,12 @@ a {
 
 body {
   display: grid;
+  grid-template-rows: 100vh;
 }
+
+/*===========
+HEADER STYLES
+===========*/
 
 header {
   display: flex;
@@ -13,10 +18,19 @@ header {
   align-items: center;
 }
 
+.titleHome {
+  margin-bottom: 0;
+}
+
+.subtitleHome {
+  margin-top: 5px;
+}
+
 .myWorkBtn {
   background-color: white;
   border: solid black;
   color: black;
+  margin-top: 75px;
   padding: 10px 32px;
   text-decoration: none;
   font-size: 1.5em;
@@ -26,4 +40,12 @@ header {
 .myWorkBtn:hover {
   color: white;
   box-shadow: inset 200px 0 0 0 #4CAF50;
+}
+
+/*==================
+SERVICES PAGE STYLES
+==================*/
+
+.servicesHeader {
+  text-align: center;
 }

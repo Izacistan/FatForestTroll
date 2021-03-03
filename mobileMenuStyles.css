@@ -1,3 +1,7 @@
+/*==============
+MOBILE MENU ICON
+==============*/
+
 #menuBar {
   width: 35px;
   height: 30px;
@@ -5,6 +9,7 @@
   cursor: pointer;
 }
 
+/* Basic Styles for the 3 Bars in the Icon */
 .bar {
   height: 5px;
   width: 100%;
@@ -14,6 +19,7 @@
   transition: 0.3s ease;
 }
 
+/* Space Bars 1 and 3 away from each other. Middle Bar does NOT need to be moved */
 #bar1 {
   transform: translateY(-4px);
 }
@@ -29,14 +35,15 @@ MENU ANIMATION
 /*
 1) The class 'change' is located in mobileMenu.js
 2) When the Mobile Menu is clicked, it toggles 'change' on/off
+3) This will allow us to toggle certain animations on/off
 */
 
-/* Change menu bars to white when selected */
+/* Change icon menu bars to white when selected */
 .change .bar {
   background-color: white;
 }
 
-/* Animate menu bars when selected */
+/* Animate bars 1 and 3 when menu icon is selected*/
 .change #bar1 {
   transform: translateY(4px) rotateZ(-45deg);
 }
@@ -45,7 +52,7 @@ MENU ANIMATION
   transform: translateY(-6px) rotate(45deg);
 }
 
-/* Make 'bar2' disappear when menu is toggled */
+/* Make bar 2 disappear when menu icon is selected */
 .change #bar2 {
   opacity: 0;
 }
@@ -54,7 +61,8 @@ MENU ANIMATION
 MENU ITEMS
 ========*/
 
-.mainNav a {
+/* Basic styles for menu items */
+.mainNav .menuItem {
   color: white;
   font-size: 1.4em;
   text-decoration: none;
@@ -62,6 +70,7 @@ MENU ITEMS
   padding: 20px 0;
 }
 
+/* Provide some space for the menu items */
 .menuItem {
   margin-top: 12px;
 }
@@ -70,10 +79,10 @@ MENU ITEMS
   padding: 0;
   margin: 0 20px;
   transition: 0.3s ease;
-  display: none;
+  display: none; /* Set to 'none' until Menu Icon is selected */
 }
 
- /* When 'change' is toggled, this allows the menu items to appear on screen. */
+ /* When Menu Icon is selected, this allows the menu items to appear on screen. */
 .change {
   display: block;
 }
@@ -85,14 +94,14 @@ MENU BACKGROUND
 .menuBackground, #menuBar {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed; /* Fixes Mobile Menu/Icon at the top of the screen. Follows user. */
 }
 
 .menuBackground {
   z-index: 1;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, black, black);
+  background: radial-gradient(circle, #000000, #414141);
   border-radius: 15px;
   transition: 0.3s ease;
 }
