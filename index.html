@@ -14,12 +14,6 @@
 
 <body> <!-- Body is the Primary Grid: 15 grid children (1 Child is the Hamburger Mobile Menu, only on Mobile) -->
 
-  <div id="menuBar">
-    <div id="bar1" class="bar"></div>
-    <div id="bar2" class="bar"></div>
-    <div id="bar3" class="bar"></div>
-  </div>
-
   <header>
     <img src="img/placeholderSVG.svg" height="200px" width="200px"> <!-- Temporary placeholder SVG -->
     <h1>Fat Forest Troll</h1>
@@ -27,12 +21,26 @@
     <button class="myWorkBtn">My Work</button>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Work</a>
-    <a href="#">Contact</a>
-  </nav>
+  <div id="menuBar">
+    <div id="menu" onclick="onClickMenu()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+
+    <nav class="mainNav" id="mainNav">
+      <a class="menuItem" href="#">Home</a>
+      <a class="menuItem" href="#">About</a>
+      <a class="menuItem" href="#">Work</a>
+      <a class="menuItem" href="#">Contact</a>
+    </nav>
+  </div>
+
+  <div class="menuBackground" id="menuBackground"></div>
+
+
+
+
 
 
   <!--==================================================================
@@ -136,6 +144,8 @@ Phasellus convallis semper finibus. Nullam vel vulputate ipsum. Pellentesque sem
     <button id="submitButton" type="submit">Send</button>
 
   </form>
+
+<script src="mobileMenu.js"></script>
 
 </body>
 </html>
