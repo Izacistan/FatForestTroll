@@ -7,17 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport, tells the site to use the device's width when displaying, sets the scale to 1.0 -->
   <!-- <link rel="icon" href="img/via_logo_2.png">  ICON GOES HERE-->
   <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="mobileMenuStyles.css">
   <link rel="stylesheet" href="style.css">
   <title>Fat Forest Troll | Web Design & Development</title>
 </head>
 
-<body>
+<body> <!-- Body is the Primary Grid: 15 grid children (1 Child is the Hamburger Mobile Menu, only on Mobile) -->
+
+  <div id="menuBar">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
 
   <header>
-    <!-- LOGO .SVG WILL GO HERE -->
+    <img src="img/placeholderSVG.svg" height="200px" width="200px"> <!-- Temporary placeholder SVG -->
     <h1>Fat Forest Troll</h1>
     <h2>Web Design + Development</h2>
-    <button>My Work</button>
+    <button class="myWorkBtn">My Work</button>
   </header>
 
   <nav>
@@ -92,43 +99,43 @@ Phasellus convallis semper finibus. Nullam vel vulputate ipsum. Pellentesque sem
                     CONTACT PAGE
     ==========================================-->
 
-    <h2 id="contactPageHeader">Contact</h2>
+  <h2 id="contactPageHeader">Contact</h2>
 
-    <div class="fftContactInfo">
+  <div class="fftContactInfo">
 
-      <p>515-402-0762</p>
-      <p>isaac@fatforesttroll.com</p>
-      <p class="fftContactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>515-402-0762</p>
+    <p>isaac@fatforesttroll.com</p>
+    <p class="fftContactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    </div>
+  </div>
 
     <!-- Contact Form -->
 
-    <form id="contactForm" action="index.html" method="post">
+  <form id="contactForm" action="index.html" method="post">
 
-      <fieldset>
-        <legend>Your Contact Information</legend>
-        <label for="contactName">Name</label>
-        <input type="text" id="contactName" name="userName" required>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="contactName">Name</label>
+      <input type="text" id="contactName" name="userName" required>
 
-        <label for="contactEmail">Email</label>
-        <input type="email" id="contactEmail" name="userEmail" required>
+      <label for="contactEmail">Email</label>
+      <input type="email" id="contactEmail" name="userEmail" required>
 
-        <label for="contactCompany">Company</label>
-        <input type="text" id="contactCompany" name="userCompany">
-      </fieldset>
+      <label for="contactCompany">Company</label>
+      <input type="text" id="contactCompany" name="userCompany">
+    </fieldset>
 
-      <fieldset>
-        <legend>Your Message For Me</legend>
-        <label for="contactMessage">Message</label>
-        <textarea id="contactMessage" name="userMessage" required></textarea>
-      </fieldset>
+    <fieldset>
+      <legend>Your Message For Me</legend>
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" name="userMessage" required></textarea>
+    </fieldset>
 
-      <button id="submitButton" type="submit">Send</button>
+    <button id="submitButton" type="submit">Send</button>
 
-    </form>
+  </form>
 
 </body>
 </html>
