@@ -4,6 +4,7 @@ a {
 
 body {
   display: grid;
+  font-family: 'Quicksand', sans-serif;
   grid-template-rows: 100vh;
 }
 
@@ -47,5 +48,71 @@ SERVICES PAGE STYLES
 ==================*/
 
 .servicesHeader {
+  margin-bottom: 15px;
   text-align: center;
+  font-size: 2.5em;
 }
+
+.divider {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.servicesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicesType {
+  font-size: 1.5em;
+}
+
+.servicesTxt {
+  padding: 0 10px 0 10px;
+  font-weight: 30;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+#servicesIcon {
+  width: 50%;
+}
+
+/*===============
+ABOUT PAGE STYLES
+===============*/
+
+#aboutBio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMeHeader {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.profilePic {
+  width: 75%;
+  object-fit: contain;
+}
+
+.bioTxt {
+  padding: 0 10px 0 10px;
+  font-weight: 30;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+/*===============
+WORK PAGE STYLES
+===============*/
+ .projectLogo {
+   width: 200px;
+   height: 200px;
+   object-fit: contain;
+ }
