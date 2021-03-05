@@ -130,10 +130,13 @@ WORK PAGE STYLES
 
 /* Making Hexagons to hold project Logos */
 .hexagon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 200px;
   height: 115.6px;
-  background: #CD5C5C;
+  background: yellow;
   margin: 144px auto;
 }
 
@@ -147,20 +150,20 @@ WORK PAGE STYLES
 
 .hexagon::before {
   bottom: 100%;
-  border-bottom: 72.17px solid #CD5C5C;
+  border-bottom: 72.17px solid yellow;
 }
 
 .hexagon::after {
   top: 100%;
-  border-top: 72.17px solid #CD5C5C;
+  border-top: 72.17px solid yellow;
 }
 
 /* Project Website Logos */
 .projectLogo {
   z-index: 1;
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
 }
 
