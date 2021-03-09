@@ -130,6 +130,8 @@ WORK PAGE STYLES
 
 /* Making Hexagons to hold project Logos */
 .hexagon {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 200px;
   height: 115.6px;
@@ -156,12 +158,17 @@ WORK PAGE STYLES
 }
 
 /* Project Website Logos */
-.projectLogo {
+.gbmProjectLogo,
+.viaProjectLogo {
   z-index: 1;
   position: absolute;
   width: 200px;
-  height: 200px;
   object-fit: contain;
+}
+
+.viaProjectLogo {
+  width: 125px;
+  margin-left: 38px;
 }
 
 .projectTxt {
