@@ -136,7 +136,8 @@ WORK PAGE STYLES
   width: 200px;
   height: 115.6px;
   background: yellow;
-  margin: 144px auto;
+  margin: 75px auto;
+  transition: .3s;
 }
 
 .hexagon::before,
@@ -157,6 +158,10 @@ WORK PAGE STYLES
   border-top: 72.17px solid yellow;
 }
 
+.hexagon:hover {
+  transform: scale(1.1);
+}
+
 /* Project Website Logos */
 .gbmProjectLogo,
 .viaProjectLogo {
@@ -164,6 +169,7 @@ WORK PAGE STYLES
   position: absolute;
   width: 200px;
   object-fit: contain;
+  filter: grayscale(100%);
 }
 
 .viaProjectLogo {
@@ -176,4 +182,25 @@ WORK PAGE STYLES
   font-weight: 30;
   font-size: 1.2em;
   line-height: 1.4em;
+}
+
+/*==========
+CONTACT PAGE
+==========*/
+#contactPageHeader {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.contactInfo {
+  padding: 0 10px 0 10px;
+  font-weight: 30;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.fftPhoneNum, .fftEmail {
+  font-size: 1.3em;
+  font-weight: bolder;
 }
