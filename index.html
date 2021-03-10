@@ -16,7 +16,7 @@
 
 <body> <!-- Body is the Primary Grid: 15 grid children (1 Child is the Hamburger Mobile Menu, only on Mobile) -->
 
-  <div id="menuBanner"></div>
+  <div id="menuBanner"></div> <!-- Not a grid child, as element is fixed (styles.css line 52) -->
 
   <header>
     <img id="logo" src="img/placeholderSVG.svg"> <!-- Temporary placeholder SVG -->
@@ -72,9 +72,9 @@
     </div>
   </div>
 
-  <div id="aboutBio">
-    <h2 class="aboutHeaders">About Me</h2>
-    <hr class="divider">
+  <h2 class="aboutHeaders">About Me</h2>
+  <hr class="divider">
+  <div id="aboutBio"> <!-- Grid Container -->
     <img class="profilePic" src="img/profilePic.jpg">
     <p class="bioTxt">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis iaculis nulla, vestibulum facilisis velit volutpat eu. Morbi eleifend erat eu sapien fermentum tincidunt. In non nibh a lectus pulvinar maximus varius eget arcu. Sed eget bibendum lacus. Aliquam a quam metus. Sed nulla sem, molestie efficitur fermentum id, condimentum a risus. Proin vestibulum non leo sit amet tincidunt. Nunc pretium elit sed est pulvinar, quis tincidunt sapien pharetra. Quisque finibus justo ut odio euismod, a ullamcorper felis dapibus. Aliquam interdum orci mauris, vel porttitor neque porta non. Praesent lectus est, viverra vitae turpis a, tempor dictum nibh.
@@ -120,42 +120,43 @@ Phasellus convallis semper finibus. Nullam vel vulputate ipsum. Pellentesque sem
     <!--========================================
                     CONTACT PAGE
     ==========================================-->
-
   <h2 id="contactPageHeader" class="aboutHeaders">Contact</h2>
   <hr class="divider">
-  <div class="contactInfo">
+  <div id="contactPage">
 
-    <p class="contactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p class="fftPhoneNum">515-402-0762</p>
-    <p class="fftEmail">isaac@fatforesttroll.com</p>
+    <div class="contactInfo">
 
+      <p class="contactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="fftPhoneNum">515-402-0762</p>
+      <p class="fftEmail">isaac@fatforesttroll.com</p>
+
+    </div>
+
+      <!-- Contact Form -->
+
+    <form id="contactForm" action="index.html" method="post">
+
+      <fieldset class="userContactForm">
+        <legend>Get in touch with me</legend>
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="userName" required>
+
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="userEmail" required>
+
+        <label for="contactCompany">Company</label>
+        <input type="text" id="contactCompany" name="userCompany">
+
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="userMessage" required></textarea>
+      </fieldset>
+
+      <button id="submitButton" type="submit">Send</button>
+
+    </form>
   </div>
-
-    <!-- Contact Form -->
-
-  <form id="contactForm" action="index.html" method="post">
-
-    <fieldset class="userContactForm">
-      <legend>Get in touch with me</legend>
-      <label for="contactName">Name</label>
-      <input type="text" id="contactName" name="userName" required>
-
-      <label for="contactEmail">Email</label>
-      <input type="email" id="contactEmail" name="userEmail" required>
-
-      <label for="contactCompany">Company</label>
-      <input type="text" id="contactCompany" name="userCompany">
-
-      <label for="contactMessage">Message</label>
-      <textarea id="contactMessage" name="userMessage" required></textarea>
-    </fieldset>
-
-    <button id="submitButton" type="submit">Send</button>
-
-  </form>
-
 <script src="JavaScript/mobileMenu.js"></script>
 
 </body>

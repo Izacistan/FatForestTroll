@@ -22,7 +22,7 @@ header {
 .aboutHeaders { /* This applies to nearly all H2's throughout the site. */
   margin-bottom: 15px;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3.5em;
 }
 
 .titleHome {
@@ -136,7 +136,6 @@ WORK PAGE STYLES
 #workPageHeader {
   margin-bottom: 15px;
   text-align: center;
-  font-size: 2.5em;
 }
 
 .projectHeader {
@@ -205,7 +204,6 @@ CONTACT PAGE
 #contactPageHeader {
   margin-bottom: 15px;
   text-align: center;
-  font-size: 2.5em;
 }
 
 .contactInfo {
@@ -263,4 +261,29 @@ label {
 #submitButton:hover {
   color: white;
   box-shadow: inset 200px 0 0 0 #4CAF50;
+}
+
+@media only screen and (min-width: 640px) {
+
+  body {
+    grid-template-rows: auto;
+  }
+
+  header {
+    margin-top: 70px;
+  }
+  /* About Bio Page */
+
+  #aboutBio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* Contact Page */
+  #contactPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Breaks Contact Description from Form. */
+  }
+
 }
