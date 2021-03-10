@@ -28,9 +28,9 @@ header {
 }
 
 .myWorkBtn {
-  background-color: white;
+  background-color: #4CAF50;
   border: solid black;
-  color: black;
+  color: white; /* On mobile, white by default. Change to #4CAF50/hover on laptop/desktop. */
   margin-top: 75px;
   padding: 10px 32px;
   text-decoration: none;
@@ -203,4 +203,49 @@ CONTACT PAGE
 .fftPhoneNum, .fftEmail {
   font-size: 1.3em;
   font-weight: bolder;
+}
+
+/* Contact Form */
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+legend {
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+
+label {
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+#contactName,
+#contactEmail,
+#contactCompany {
+  height: 25px;
+}
+
+#contactMessage {
+  height: 60px;
+}
+
+#submitButton {
+  background-color: #4CAF50;
+  border: solid black 2px;
+  margin-left: 14px;
+  margin-bottom: 10px;
+  color: white; /* On mobile, white by default. Change to #4CAF50/hover on laptop/desktop. */
+  padding: 7px 25px;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: ease 0.6s;
+}
+
+#submitButton:hover {
+  color: white;
+  box-shadow: inset 200px 0 0 0 #4CAF50;
 }
