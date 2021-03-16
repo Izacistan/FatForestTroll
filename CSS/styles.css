@@ -81,6 +81,12 @@ SERVICES PAGE STYLES
   align-items: center;
 }
 
+.iconTxtContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .servicesType {
   font-size: 1.5em;
 }
