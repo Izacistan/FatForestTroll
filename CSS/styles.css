@@ -6,6 +6,7 @@ body {
   display: grid;
   font-family: 'Quicksand', sans-serif;
   grid-template-rows: 100vh;
+  grid-auto-rows: minmax(10px, auto);
 }
 
 /*===========
@@ -270,15 +271,36 @@ label {
   }
 
   header {
-    margin-top: 70px;
+    margin-top: 50px;
+  }
+
+  #logo {
+    width: 50%;
+  }
+
+  .myWorkBtn {
+    margin-top: 0px;
+  }
+
+  #servicesIcon {
+    width: 25%;
+  }
+
+  .aboutHeaders {
+    font-size: 3em;
+  }
+
+  .divider {
+    width: 25%;
   }
   /* About Bio Page */
 
   #aboutBio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 
+  .bioTxt {
+    padding: 0;
+  }
 
   /* Contact Page */
   #contactPage {
