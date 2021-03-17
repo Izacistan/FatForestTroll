@@ -63,6 +63,13 @@ header {
 SERVICES PAGE STYLES
 ==================*/
 
+.serviceIconHeadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
 .servicesHeader {
   margin-bottom: 15px;
   text-align: center;
@@ -299,6 +306,26 @@ label {
   .divider {
     width: 25%;
   }
+
+  /* About Services Page */
+
+  .serviceIconHeadContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  #servicesIcon {
+    width: 50%;
+  }
+
+  .iconTxtContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
   /* About Bio Page */
 
   #aboutBio {
