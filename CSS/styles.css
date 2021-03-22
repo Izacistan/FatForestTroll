@@ -125,6 +125,12 @@ ABOUT PAGE STYLES
   font-size: 2.5em;
 }
 
+.profilePicBioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profilePic {
   width: 75%;
   object-fit: contain;
@@ -324,6 +330,9 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    border: solid gray 1px;
+    margin: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   /* About Bio Page */
@@ -331,8 +340,21 @@ label {
   #aboutBio {
   }
 
+  .profilePicBioContainer {
+    display: block;
+  }
+
+  .profilePic {
+    float: left;
+    padding: 25px;
+    padding-bottom: 0;
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+  }
+
   .bioTxt {
-    padding: 0;
+    padding: 0 25px 0 25px;
   }
 
   /* Contact Page */
