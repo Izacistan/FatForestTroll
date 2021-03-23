@@ -357,6 +357,12 @@ label {
     padding: 0 25px 0 25px;
   }
 
+  /* Work page */
+.projectTxt {
+  padding: 0 25px 0 25px;
+}
+
+
   /* Contact Page */
   #contactPage {
     display: grid;
