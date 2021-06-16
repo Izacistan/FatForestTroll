@@ -147,76 +147,11 @@ ABOUT PAGE STYLES
 WORK PAGE STYLES
 ===============*/
 
-#workPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-#workPageHeader {
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.projectHeader {
-  font-size: 1.5em;
-}
-
-/* Making Hexagons to hold project Logos */
-.hexagon {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 200px;
-  height: 115.6px;
-  background: yellow;
-  margin: 75px auto;
-  transition: .3s;
-}
-
-.hexagon::before,
-.hexagon::after {
-  content: "";
-  position: absolute;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-}
-
-.hexagon::before {
-  bottom: 100%;
-  border-bottom: 72.17px solid yellow;
-}
-
-.hexagon::after {
-  top: 100%;
-  border-top: 72.17px solid yellow;
-}
-
-.hexagon:hover {
-  transform: scale(1.1);
-}
 
 /* Project Website Logos */
-.gbmProjectLogo,
-.viaProjectLogo {
-  z-index: 1;
-  position: absolute;
-  width: 200px;
-  object-fit: contain;
-  filter: grayscale(100%);
-}
 
-.viaProjectLogo {
-  width: 125px;
-  margin-left: 38px;
-}
 
-.projectTxt {
-  padding: 0 10px 0 10px;
-  font-weight: 30;
-  font-size: 1.2em;
-  line-height: 1.4em;
-}
 
 /*==========
 CONTACT PAGE
