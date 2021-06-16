@@ -87,6 +87,7 @@ SERVICES PAGE STYLES
 
 .servicesType {
   font-size: 1.5em;
+  margin-top: -25px;
 }
 
 .servicesTxt {
@@ -97,7 +98,7 @@ SERVICES PAGE STYLES
 }
 
 #servicesIcon {
-  width: 50%;
+  width: 100%;
 }
 
 /*===============
