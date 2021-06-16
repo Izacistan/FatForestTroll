@@ -50,15 +50,6 @@ header {
   box-shadow: inset 200px 0 0 0 #4CAF50;
 }
 
-#menuBanner {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  height: 50px;
-  background-image: linear-gradient(to bottom right, #000000, #414141);
-}
-
 /*==================
 SERVICES PAGE STYLES
 ==================*/
