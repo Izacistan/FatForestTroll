@@ -1,4 +1,16 @@
-/* Basic Styles for the 3 Bars in the Icon */
+/*================
+BURGER ICON STYLES
+================*/
+#burger-icon {
+  z-index: 1;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
 .bar {
   height: 5px;
   width: 25px;
@@ -22,39 +34,84 @@ MENU ANIMATION
 ============*/
 
 /*
-1) The class 'toggleAnimate' is located in mobile-menu.js file (look in 'toggleClass()'' function)
-2) When the 'burger-icon' is clicked, it toggles 'toggleAnimate' on/off
+1) The class 'active' is located in mobile-menu.js file (look in the function)
+2) When the 'burger-icon' is clicked, it toggles 'active' on/off
 3) This will allow us to toggle certain animations on/off
 */
 
 /* Animate bars 1 and 3 when menu icon is selected*/
-.toggleAnimate #bar1 {
+
+.active .bar {
+  background-color: white;
+}
+
+.active #bar1 {
   transform: translateY(4px) rotateZ(-45deg);
 }
 
-.toggleAnimate #bar3 {
+.active #bar3 {
   transform: translateY(-6px) rotate(45deg);
 }
 
 /* Make bar 2 disappear when menu icon is selected */
-.toggleAnimate #bar2 {
+.active #bar2 {
   opacity: 0;
 }
 
+/*=================
+MENU/SIDEBAR STYLES
+==================*/
+
+#burger-menu {
+  position: fixed;
+  top: 0;
+  transform: translate(-300px);
+  width:300px;
+  height: 100vh;
+  background: black;
+  transition-duration: 5s; /* Not working. Fix*/
+}
+
+#burger-menu.active {
+  transform: translate(0px);
+}
+
+#burger-menu ul {
+  position: relative;
+  margin-top: 50px;
+}
+
+#burger-menu ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 40px
+}
+
+#burger-menu ul li:hover {
+  background: pink;
+}
+
+#burger-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
 
 /*============
 MEDIA QUERY
 ============*/
 /* When the screen size increases to 768px or above, the navigation menu will become visible */
 @media (max-width: 768px) {
-  .burger-menu {
+  #burger-menu {
     display: none;
   }
 /* When the burger-icon is clicked, JavaScript adds the 'toggleCls' class.
   This causes the list items to display.
   When clicked a second time, it will remove the class and no longer display
   the list items. */
-  .burger-menu.toggleCls {
+  #burger-menu.active {
     display: block;
   }
 
@@ -62,7 +119,7 @@ MEDIA QUERY
 
 /* While screen size is below 769px, the burger icon remains visible. */
 @media (min-width: 769px) {
-  .burger-icon {
+  #burger-icon {
     display: none;
   }
 }
