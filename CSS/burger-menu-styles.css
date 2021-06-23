@@ -65,7 +65,7 @@ MENU/SIDEBAR STYLES
 #burger-menu {
   position: fixed;
   top: 0;
-  transform: translate(-308px);
+  transform: translate(-300px);
   transition-duration: 0.5s;
   width:300px;
   height: 100vh;
@@ -84,8 +84,6 @@ MENU/SIDEBAR STYLES
 
 #burger-menu ul li {
   list-style: none;
-  display: inline-block;
-  padding: 10px 40px
 }
 
 #burger-menu ul li a {
@@ -112,10 +110,16 @@ MEDIA QUERY
   When clicked a second time, it will remove the class and no longer display
   the list items. */
   #burger-menu.active {
-    transform: translate(-8px);
+    transform: translate(0px);
     transition-duration: 0.5s;
   }
 
+}
+
+@media (min-width: 667px) {
+  #burger-menu ul {
+    line-height: 55px;
+  }
 }
 
 /* While screen size is below 769px, the burger icon remains visible. */

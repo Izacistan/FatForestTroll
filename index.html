@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="CSS/mobileMenuStyles.css">
+  <link rel="stylesheet" href="css/burger-menu-styles.css">
   <link rel="stylesheet" href="CSS/styles.css">
   <title>Fat Forest Troll | Web Design & Development</title>
 </head>
@@ -17,132 +17,154 @@
 <body> <!-- Body is the Primary Grid: 15 grid children (1 Child is the Hamburger Mobile Menu, only on Mobile) -->
 
   <header>
-    <img id="logo" src="img/placeholderSVG.svg"> <!-- Temporary placeholder SVG -->
-    <h1 class="titleHome">Fat Forest Troll</h1>
-    <h2 class="subtitleHome">Web Design + Development</h2>
-    <button class="myWorkBtn">My Work</button>
+
+    <div id="burger-icon" onclick="active">
+       <div id="bar1" class="bar"></div>
+       <div id="bar2" class="bar"></div>
+       <div id="bar3" class="bar"></div>
+    </div>
+
+    <nav id="burger-menu">
+      <ul>
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#">Services</a></li>
+        <li class="menu-item"><a href="#">About</a></li>
+        <li class="menu-item"><a href="#">Portfolio</a></li>
+        <li class="menu-item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
   </header>
 
+  <main id="container" onclick="clickAway()">
+
+    <div id="home-page-container">
+      <img id="logo" src="img/placeholderSVG.svg"> <!-- Temporary placeholder SVG -->
+      <h1 class="titleHome">Fat Forest Troll</h1>
+      <h2 class="subtitleHome">Web Design + Development</h2>
+      <button class="myWorkBtn">My Work</button>
+    </div>
   <!--==================================================================
                                ABOUT PAGE (Services)
   Split into two <div>s, functioning as two seperate pages: Services & Bio.
  =====================================================================-->
 
-  <div id="aboutServicesPage">
+    <div id="aboutServicesPage">
 
-    <h2 class="aboutHeaders">Services</h2>
-    <hr class="divider">
-    <div class="servicesBox">
+      <h2 class="aboutHeaders">Services</h2>
+      <hr class="divider">
+      <div class="servicesBox">
 
-    <div class="iconTxtContainer">
-      <div class="serviceIconHeadContainer">
-        <img id="servicesIcon" src="img/placeholderSVG.svg">
-        <h3 class="servicesType">Design</h3>
+      <div class="iconTxtContainer">
+        <div class="serviceIconHeadContainer">
+          <img id="servicesIcon" src="img/compatability_icon.svg">
+          <h3 class="servicesType">Design</h3>
+        </div>
+        <p class="servicesTxt">I design intuitive websites that are easy to navigate and enjoyable to use.
+          All of my websites are designed with simplicity in mind.
+          A simple layout makes your website more enjoyable to use and allows users to get the information they want faster.
+          Every person and every business is different, and I will work with you to design the best website to suit your needs.</p>
       </div>
-      <p class="servicesTxt">I design intuitive websites that are easy to navigate and enjoyable to use.
-        All of my websites are designed with simplicity in mind.
-        A simple layout makes your website more enjoyable to use and allows users to get the information they want faster.
-        Every person and every business is different, and I will work with you to design the best website to suit your needs.</p>
-    </div>
 
-    <div class="iconTxtContainer">
-      <div class="serviceIconHeadContainer">
-        <img id="servicesIcon" src="img/compatability_icon.svg">
-        <h3 class="servicesType">Compatability</h3>
+      <div class="iconTxtContainer">
+        <div class="serviceIconHeadContainer">
+          <img id="servicesIcon" src="img/compatability_icon.svg">
+          <h3 class="servicesType">Compatability</h3>
+        </div>
+        <p class="servicesTxt">From your smartphone to your tablet, and from your laptop to your desktop, websites should work across all devices and screen sizes.
+          All of my websites will work and function properly across all modern browsers and all screen sizes,
+          so you do not need to worry about clients missing important information or having a bad experience on your website.</p>
       </div>
-      <p class="servicesTxt">From your smartphone to your tablet, and from your laptop to your desktop, websites should work across all devices and screen sizes.
-        All of my websites will work and function properly across all modern browsers and all screen sizes,
-        so you do not need to worry about clients missing important information or having a bad experience on your website.</p>
-    </div>
 
-    <div class="iconTxtContainer">
-      <div class="serviceIconHeadContainer">
-        <img id="servicesIcon" src="img/placeholderSVG.svg">
-        <h3 class="servicesType">Code</h3>
+      <div class="iconTxtContainer">
+        <div class="serviceIconHeadContainer">
+          <img id="servicesIcon" src="img/compatability_icon.svg">
+          <h3 class="servicesType">Code</h3>
+        </div>
+        <p class="servicesTxt">I start with an HTML/CSS foundation, and then build upon that with JavaScript and/or PHP to create any corresponding website features.
+          While I love custom building websites, I understand that sometimes WordPress sites are a better fit for some clients. I will work with you to determine <thead>
+            best route for your website.
+          </thead>
+        </p>
       </div>
-      <p class="servicesTxt">I start with an HTML/CSS foundation, and then build upon that with JavaScript and/or PHP to create any corresponding website features.
-        While I love custom building websites, I understand that sometimes WordPress sites are a better fit for some clients. I will work with you to determine <thead>
-          best route for your website.
-        </thead>
-      </p>
+
+      </div>
     </div>
 
+    <!--==================================================================
+                                 ABOUT PAGE (Bio)
+    Split into two <div>s, functioning as two seperate pages: Services & Bio.
+   =====================================================================-->
+
+    <div id="aboutBio"> <!-- Grid Container -->
+      <h2 class="aboutHeaders">About Me</h2>
+      <hr class="divider">
+      <div class="profilePicBioContainer">
+        <img class="profilePic" src="img/profilePic.jpg">
+        <p class="bioTxt">My name is Isaac Hillaker. I am a Frontend Web Designer and Developer based in Des Moines, Iowa. Contrary to popular belief,
+          I am not a troll who lives in the woods: I am just a normal human being who enjoys making websites (from the comfort of my normal, modern home).
+          Being a web developer lets me practice some of my favorite skills and employ them practically. I get the opportunity to work with small businesses to
+          create unique, functional websites to suit their needs, and in doing this I get to create custom designs and am able to code them into reality.
+          When I am not coding or building websites, I am playing Animal Crossing, Dungeons and Dragons, exploring the outdoors,
+          or spending time with my wife (Emily) and our two sons (Ezra and Cyrus). </p>
     </div>
-  </div>
-
-  <!--==================================================================
-                               ABOUT PAGE (Bio)
-  Split into two <div>s, functioning as two seperate pages: Services & Bio.
- =====================================================================-->
-
-  <div id="aboutBio"> <!-- Grid Container -->
-    <h2 class="aboutHeaders">About Me</h2>
-    <hr class="divider">
-    <div class="profilePicBioContainer">
-      <img class="profilePic" src="img/profilePic.jpg">
-      <p class="bioTxt">My name is Isaac Hillaker. I am a Frontend Web Designer and Developer based in Des Moines, Iowa. Contrary to popular belief,
-        I am not a troll who lives in the woods: I am just a normal human being who enjoys making websites (from the comfort of my normal, modern home).
-        Being a web developer lets me practice some of my favorite skills and employ them practically. I get the opportunity to work with small businesses to
-        create unique, functional websites to suit their needs, and in doing this I get to create custom designs and am able to code them into reality.
-        When I am not coding or building websites, I am playing Animal Crossing, Dungeons and Dragons, exploring the outdoors,
-        or spending time with my wife (Emily) and our two sons (Ezra and Cyrus). </p>
-  </div>
-  </div>
-
-  <!--========================================
-                      WORK PAGE
-  ==========================================-->
-
-  <h2 id="workPageHeader" class="aboutHeaders">My Work</h2>
-  <hr class="divider">
-
-  <div id="workPage">
-
-  </div>
-
-
+    </div>
 
     <!--========================================
-                    CONTACT PAGE
+                        WORK PAGE
     ==========================================-->
-  <h2 id="contactPageHeader" class="aboutHeaders">Contact</h2>
-  <hr class="divider">
-  <div id="contactPage">
 
-    <div class="contactInfo">
+    <h2 id="workPageHeader" class="aboutHeaders">My Work</h2>
+    <hr class="divider">
 
-      <p class="contactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p class="fftPhoneNum">515-402-0762</p>
-      <p class="fftEmail">isaac@fatforesttroll.com</p>
+    <div id="workPage">
 
     </div>
 
-      <!-- Contact Form -->
 
-    <form id="contactForm" action="index.html" method="post">
 
-      <fieldset class="userContactForm">
-        <legend>Get in touch with me</legend>
-        <label for="contactName">Name</label>
-        <input type="text" id="contactName" name="userName" required>
+      <!--========================================
+                      CONTACT PAGE
+      ==========================================-->
+    <h2 id="contactPageHeader" class="aboutHeaders">Contact</h2>
+    <hr class="divider">
+    <div id="contactPage">
 
-        <label for="contactEmail">Email</label>
-        <input type="email" id="contactEmail" name="userEmail" required>
+      <div class="contactInfo">
 
-        <label for="contactCompany">Company</label>
-        <input type="text" id="contactCompany" name="userCompany">
+        <p class="contactTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="fftPhoneNum">515-402-0762</p>
+        <p class="fftEmail">isaac@fatforesttroll.com</p>
 
-        <label for="contactMessage">Message</label>
-        <textarea id="contactMessage" name="userMessage" required></textarea>
-      </fieldset>
+      </div>
 
-      <button id="submitButton" type="submit">Send</button>
+        <!-- Contact Form -->
 
-    </form>
-  </div>
-<script src="JavaScript/mobileMenu.js"></script>
+      <form id="contactForm" action="index.html" method="post">
+
+        <fieldset class="userContactForm">
+          <legend>Get in touch with me</legend>
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="userName" required>
+
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="userEmail" required>
+
+          <label for="contactCompany">Company</label>
+          <input type="text" id="contactCompany" name="userCompany">
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="userMessage" required></textarea>
+        </fieldset>
+
+        <button id="submitButton" type="submit">Send</button>
+
+      </form>
+    </div>
+  </main>
+<script src="JavaScript/mobile-menu.js"></script>
 
 </body>
 </html>
