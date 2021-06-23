@@ -85,12 +85,7 @@ MENU/SIDEBAR STYLES
 #burger-menu ul li {
   list-style: none;
   display: inline-block;
-  width: 100%;
   padding: 10px 40px
-}
-
-#burger-menu ul li:hover {
-  background: pink;
 }
 
 #burger-menu ul li a {
@@ -98,6 +93,13 @@ MENU/SIDEBAR STYLES
   text-decoration: none;
   font-size: 1.5em;
   letter-spacing: 2px;
+}
+
+/* clickAway() testing. */
+.img {
+  width: 100%;
+  height: 100vh;
+  background-color: pink;
 }
 
 /*============
@@ -110,7 +112,6 @@ MEDIA QUERY
   When clicked a second time, it will remove the class and no longer display
   the list items. */
   #burger-menu.active {
-    display: block;
     transform: translate(-8px);
     transition-duration: 0.5s;
   }
